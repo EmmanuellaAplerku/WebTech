@@ -37,18 +37,18 @@
         </li>
     </ul>
 </nav>
-<!--horizontal cards-->
+<!--horizontal cards for enlisted companies-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3">
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
-                        <img class="" src="" alt="Card image cap">
+                        <img class="" src="kpmglogo.png" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">KPMG Ghana</h4>
-                        <p class="card-text">KPMG is a world-class firm that deals in accounting, tax and insurance<br>
+                        <p class="card-text"> KPMG is a global network of professional services firms providing Audit, Tax and Advisory services. The firms work closely with clients, helping them to mitigate risks and grasp opportunities.  <br>
                     Location: Dzorwulu, Off the Perez Chapel Road, Accra Ghana<br>
                     P.O. Box 541 BT, Achimota<br>
                     Requirements: GPA > 3.5<br> 
@@ -70,14 +70,15 @@
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
-                        <img class="" src="https://cdn.modernghana.com/story_/1024/728/3172020121606-otkvn0y442-lancaster-university-ghana.jpg" alt="Card image cap" width="608px", height="523px">
+                        <img class="" src="databanklogo.png" alt="Card image cap" width="608px", height="523px">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">Data Bank</h4>
-                        <p class="card-text">Lancaster University has been providing World Class education to students across the world.
-                    Lancaster University Ghana offers programmes in Business Management,
-                    Marketing, Politics, Economics, International Relations, Computer Science,
-                    Accounting & Finance and Law. <br></p>
+                        <p class="card-text">KPMG is a world-class firm that deals in accounting, tax and insurance<br>
+                    Location: Dzorwulu, Off the Perez Chapel Road, Accra Ghana<br>
+                    P.O. Box 541 BT, Achimota<br>
+                    Requirements: GPA > 3.5<br> 
+                    Majors: Business Administration, Computer Science, Management Information Systems,Computer Engineering<br></p>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -95,14 +96,15 @@
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
-                        <img class="" src="legonlogo.png" alt="Card image cap" width="608px", height="523px">
+                        <img class="" src="cargilllogo.png" alt="Card image cap" width="608px", height="523px">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">Cargill Ghana Limited</h4>
-                        <p class="card-text">Lancaster University has been providing World Class education to students across the world.
-                    Lancaster University Ghana offers programmes in Business Management,
-                    Marketing, Politics, Economics, International Relations, Computer Science,
-                    Accounting & Finance and Law. <br></p>
+                        <p class="card-text">KPMG is a world-class firm that deals in accounting, tax and insurance<br>
+                    Location: Tema Industrial Area, Ghana<br>
+                    P.O. Box 541 BT, Achimota<br>
+                    Requirements: GPA > 2.90<br> 
+                    Majors: Engineering,Business Administration, Computer Science, Management Information Systems<br></p>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -119,12 +121,14 @@
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
-                        <img class="" src="Techlogo.png" alt="Card image cap" width="608px", height="523px">
+                        <img class="" src="nestlelogo.png" alt="Card image cap" width="608px", height="523px">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">Nestle Ghana</h4>
-                        <p class="card-text">KNUST aims to provide an environment for teaching, research and entrepreneurship training in Science and Technology for the industrial and socio-economic development of Ghana and beyond.
-                          Kwame Nkrumah University of Science and Technology is a university located in Kumasi, Ghana. The Kwame Nkrumah University of Science and Technology is the public university established in the country, as well as the largest university in the Kumasi Metropolis and in the Ashanti Region. <br></p>
+                        <p class="card-text">KPMG is a world-class firm that deals in accounting, tax and insurance<br>
+                    Location:Sanyo Road Heavy Industrial Area Tema<br>
+                    Requirements: GPA > 3.0<br> 
+                    Majors: Engineering, Business Administration, Computer Science, Management Information Systems<br></p> <br></p>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -141,12 +145,14 @@
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
-                        <img class="" src="Techlogo.png" alt="Card image cap" width="608px", height="523px">
+                        <img class="" src="genkeylogo.png" alt="Card image cap" width="608px", height="523px">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">Genkey</h4>
-                        <p class="card-text">KNUST aims to provide an environment for teaching, research and entrepreneurship training in Science and Technology for the industrial and socio-economic development of Ghana and beyond.
-                          Kwame Nkrumah University of Science and Technology is a university located in Kumasi, Ghana. The Kwame Nkrumah University of Science and Technology is the public university established in the country, as well as the largest university in the Kumasi Metropolis and in the Ashanti Region. <br></p>
+                        <p class="card-text">Genkey provides a full range of digital biometric identity products, used by governments, public institutions and businesses.<br>
+                    Location: No. 5 1st Asoyi Rd, Accra<br>
+                    Requirements: GPA > 2.75<br> 
+                    Majors: Computer Engineering, Computer Science, Management Information Systems<br></p> <br></p>
                     </div>
                 </div>
                 <div class="card-footer">
