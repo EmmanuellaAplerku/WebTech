@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device=width, initial-scale=1.0">
-    <title>Webtech Form</title>
+    <title>AJAX</title>
 
 </head>
 <body>
@@ -43,7 +43,23 @@
         <input type="submit" name="SubmitForm"><br> 
     </form>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
 
+<script> 
+ $(document).on('submit','#result',function(e){ 
+    e.preventDefault(); 
+    
+    $.ajax({ 
+    method:"POST", 
+    url: "results_page.php", 
+    data:$(this).serialize(), 
+    success: function(data){ 
+    $('#msg').html(data); 
+    $('#userForm').find('input').val('') 
+            }}); 
+    }); 
+
+</script>
 
 
 </body>

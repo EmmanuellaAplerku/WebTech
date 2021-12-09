@@ -1,0 +1,316 @@
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+
+.aboutus{
+  color: black;
+  padding-left:120px;
+  padding-right:120px;
+}
+
+.nav-link{
+  color:#26272b;
+}
+
+.SignUpPageTitle{
+  padding-left:30px;
+  
+}
+
+.signupinfo{
+  padding-left:30px;
+}
+
+.loginpage{
+  padding-left:70px;
+}
+
+.signupbutton{
+  padding-left:30px;
+}
+
+.login-info{
+  padding-left:30px;
+}
+
+.loginpagetitle{
+  padding-left:30px;
+}
+
+.signuppage{
+  padding-left:70px;
+}
+
+.webname{
+  position: relative;
+}
+
+.companyrequirements .h6{
+  text-align:center
+}
+
+.video-background-holder {
+  position: relative;
+  background-color: black;
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-background-holder video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.card-body{
+  background-color: gray;
+}
+
+.card-text{
+  color:white;
+  text-align:justify
+}
+
+.card-title{
+  color:white;
+}
+
+
+.about{
+	cursor: pointer;
+	background-color:gray;
+	color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
+.about h1 {
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.about h2 {
+	opacity: .8;
+}
+.about span {
+	display: block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin:auto;
+	border-radius:50%;  
+	font-size: 40px;
+	color: #FFFFFF;
+	opacity: 0.7;
+	background-color:black;
+	border: 2px solid white;
+
+	-webkit-transition:all .5s ease;
+ 	-moz-transition:all .5s ease;
+ 	os-transition:all .5s ease;
+ 	transition:all .5s ease;
+
+}
+.about-item:hover span{
+	opacity: 1;	
+	border: 2px solid white;
+	font-size: 42px;
+	-webkit-transform: scale(1.1,1.1) rotate(360deg) ;
+	-moz-transform: scale(1.1,1.1) rotate(360deg) ;
+	-o-transform: scale(1.1,1.1) rotate(360deg) ;
+	transform: scale(1.1,1.1) rotate(360deg) ;
+}
+.about-item:hover h2{
+	opacity: 1;
+	-webkit-transform: scale(1.1,1.1)  ;
+	-moz-transform: scale(1.1,1.1)  ;
+	-o-transform: scale(1.1,1.1)  ;
+	transform: scale(1.1,1.1) ;
+}
+.about .lead{
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+  text-align: justify;
+}
+
+.applicationformtitle{
+  padding-left:30px;
+}
+
+.applicantinfo{
+  padding-left:30px;
+}
+
+.applicationbutton{
+  padding-left:30px;
+}
+
+.half-half-image-text{
+  padding: 70px 0px;
+}
+
+.half-half-image-text .h1{
+    color: #800000;
+  }
+  .content{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    padding: 35px 0px;
+  }
+  .content .p{
+      font-size:22px;
+    }
+  
+
+  .img{
+    min-height: 320px;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+#deletebutton{
+    padding-left:30px;
+  }
+
+.approvedeletion{
+  padding-left:30px;
+}
+
+.confirm_message{
+  padding-left:30px;
+}
+
+.carousel-item{
+  height: 100vh;
+ }
+ 
+ .carousel-caption{
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial!important;
+ }
+ 
+ .carousel-caption h5{
+  font-size: 42px;
+ }

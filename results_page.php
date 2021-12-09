@@ -17,18 +17,4 @@ if ($conn->query($database) === TRUE) {
     }
 $conn->close();
 
-
-//Creating an http request
-$silentreq = new XMLHttpRequest();
-
-//Creating a callback
-$silentreq.onload = function() {
-  echo "";
-}
-
-//Send a request
-$silentreq.open("GET", "ajax_info.txt");
-$silentreq.send();
-
-
 ?>
