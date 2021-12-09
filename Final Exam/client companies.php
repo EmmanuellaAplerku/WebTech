@@ -179,12 +179,7 @@
             Tema-Ghana<br><br>
             <h6>PHONE:</h6> +233-558-266-422 |+233-262-363-585<br><br>
             <h6>EMAIL:</h6> info@theexperiencehubghana.com<br>
-
-            
-
-
-
-          </p>
+            </p>
           </div>
 
           <div class="col-xs-6 col-md-3">

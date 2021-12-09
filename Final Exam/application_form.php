@@ -1,3 +1,37 @@
+ <?php    
+include("WebsiteDb_Connection.php");
+
+//If statement that triggers query from the database - Allows applicant's details to be inserted
+if(isset($_POST["submit"])){
+ 
+
+    //Assigning form data names to variables
+    $UniversityID = $_POST['universityID'];
+       $Name = $_POST['fname'];
+       $Gender = $_POST['gender'];
+       $Email = $_POST['email'];
+       $Level = $_POST['levels'];
+       $Major = $_POST['major'];
+       $GPA = $_POST['gpa'];
+       $CompanyPreference = $_POST['company'];
+
+
+     //Query to insert variables into the database
+       $query = "INSERT INTO `applicant` (`universityID`,`fname`,`gender`,`email`,`levels`,`major`,`gpa`,`companypreference`) VALUES ('$UniversityID','$Name','$Gender','$Email','$Level','$Major','$GPA','$CompanyPreference')";
+
+          //Execution of query
+          mysqli_query($conn, $query);
+
+          //Redirects to another page
+      header("location: confirmation.php");
+
+
+    }
+
+//Closes connection to database
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +81,7 @@
 </div>
 
 <!--Form to accept application details from user-->
-<form action="confirmation.php" method="POST" name="Application Form">
+<form action="" method="POST" name="Application Form">
       <label class="applicantinfo">Full Name: </label><input type="text" name="fname" size="30" placeholder="Full Name" required/><br><br>
       <label class="applicantinfo">Email: </label><input type="email" name="email" size="50" placeholder="Email" required/><br><br>
       <label class="applicantinfo"for="gender">Select your gender:</label>
@@ -79,39 +113,8 @@
 </form><br><br>
 
 <?php
-session_start();
+
 require("footer.php");
-     
-include("WebsiteDb_Connection.php");
-
-//If statement that triggers query from the database - Allows applicant's details to be inserted
-if(isset($_POST["submit"])){
-
-    //Assigning form data names to variables
-    $UniversityID = $_POST['universityID'];
-       $Name = $_POST['fname'];
-       $Gender = $_POST['gender'];
-       $Email = $_POST['email'];
-       $Level = $_POST['levels'];
-       $Major = $_POST['major'];
-       $GPA = $_POST['gpa'];
-       $CompanyPreference = $_POST['companypreference'];
-
-
-     //Query to insert variables into the database
-       $query = "INSERT INTO `applicant` (`universityID`,`fname`,`gender`,`email`,`levels`,`major`,`gpa`,`companypreference`) VALUES ('$UniversityID','$Name','$Gender','$Email','$Level','$Major','$GPA','$CompanyPreference')";
-
-          //Execution of query
-          mysqli_query($conn, $query);
-
-          //Redirects to another page
-      header("location: confirmation.php");
-
-
-    }
-
-//Closes connection to database
-$conn->close();
 ?>
 
 

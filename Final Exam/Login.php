@@ -29,7 +29,7 @@
 <!--Form to accpet the login details of users-->
 <form action="" method="post" >
    <label class="login-info" >Email: </label><input type="text" name="email" size="50" placeholder="Email" required/><br><br><br>
-   <label class="login-info" >Password: </label><input type="password" name="pwd1" size="30" placeholder="Password" required/><br><br><br>
+   <label class="login-info" >Password: </label><input type="password" name="password" size="30" placeholder="Password" required/><br><br><br>
    <label class="login-info" ></label><input type="submit" name="submit" class="button" value="Log In"><br>
    
     <!--Link to signup page-->
@@ -48,40 +48,59 @@
 
        //Assigns form input names to variables
        $Email = $_POST['email'];
-          $Password =md5($_POST['pwd1']);
+          $password =$_POST['password'];
 
 
           //Query to retrieve values from the database
-          $query = "SELECT COUNT(*)  AS total  FROM user_account WHERE email = '".$Email."' and password = '".$Password."'";
+          $query = "SELECT *  FROM user_account WHERE email = '".$Email."'";
+          //echo $query;
+          //return;
 
 
           //Execution of query
           $result = mysqli_query($conn, $query);
 
           $log = mysqli_fetch_array($result);
-
-   }
+          
+          
+   
       //if statement to check if user details are in the database
-      if($log['total'] > 0){
+      if(!empty($log)){
+        $password= md5($password);
+        
+        echo 'user password '.$password."<br>";
+        echo 'database '.$log['password']."<br>";
+    
+
+       if($password== $log['password']){
+        
 
 
       //Redirects page
       header("location: home.php");
 
-  }
+       }
+       else{
+        //Displays message from the browser if the details are not in the database
+        echo "<script>alert('Email or password is incorrect')</script>";
+       }  
+    
+    }
+       else{
+        //Displays message from the browser if the details are not in the database
+        echo "<script>alert('User cannot be found')</script>";
+    }
+  
+  
 
-  else{
-      //Displays message from the browser if the details are not in the databse
-      echo "<script>alert('Email or password is incorrect')</script>";
-  }
-
+ 
 
 
    
 
 //Closes connection to database
-$conn->close();
 
+      }
 ?>
 
 </body>
