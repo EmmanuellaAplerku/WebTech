@@ -1,3 +1,4 @@
+<!--Source for half picture-half text template:https://codepen.io/SamCPrice/pen/YRBZWx-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
