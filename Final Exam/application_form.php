@@ -123,10 +123,10 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
 
 <?php while ($row = mysqli_fetch_array($formdata)) { ?>
   <tr>
-    <td><?php echo $row['fname']; ?></td>
-    <td><?php echo $row['email']; ?></td>
-    <td><?php echo $row['gpa']; ?></td>
-    <td><?php echo $row['companypreference']; ?></td>
+    <td class="tablecontent"><?php echo $row['fname']; ?></td>
+    <td class="tablecontent"><?php echo $row['email']; ?></td>
+    <td class="tablecontent"><?php echo $row['gpa']; ?></td>
+    <td class="tablecontent"><?php echo $row['companypreference']; ?></td>
     <td>
       <a href="application_form.php?edit=<?php echo $row['applicantID']; ?>" class="button">Edit</a>
     </td>
