@@ -8,7 +8,7 @@ if(isset($_POST["submit"])){
  
 
     //Assigning form data names to variables
-    $UniversityID = $_POST['universityID'];
+      $UniversityID = $_POST['universityID'];
        $Name = $_POST['fname'];
        $Gender = $_POST['gender'];
        $Email = $_POST['email'];
@@ -29,9 +29,6 @@ if(isset($_POST["submit"])){
 
 
     }
-
-//Closes connection to database
-$conn->close();
 ?>
 
 <?php 
@@ -65,6 +62,14 @@ $conn->close();
 
 
 <body>
+<?php if (isset($_SESSION['message'])): ?>
+	<div class="msg">
+		<?php 
+			echo $_SESSION['message']; 
+			unset($_SESSION['message']);
+		?>
+    </div><?php endif ?>
+
     <!--Creating a navbar -->
     <nav class = "navbar navbar-light bg-transparent">
     <div class="container-fluid">
@@ -111,7 +116,7 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
       <th>Email</th>
       <th>GPA</th>
       <th>Company Preference</th>
-      <th colspan="3">Changes</th>
+      <th colspan="2">Changes</th>
     </tr>
   </thead>
 
@@ -123,10 +128,10 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
     <td><?php echo $row['gpa']; ?></td>
     <td><?php echo $row['companypreference']; ?></td>
     <td>
-      <a href="application_form.php?edit=<?php echo $row['id']; ?>" class="button">Edit</a>
+      <a href="application_form.php?edit=<?php echo $row['applicantID']; ?>" class="button">Edit</a>
     </td>
     <td>
-      <a href="edit_delete.php?del=<?php echo $row['id']; ?>" class="button">Delete</a>
+      <a href="edit_delete.php?del=<?php echo $row['applicantID']; ?>" class="button">Delete</a>
     </td>
   </tr>
  <?php } ?>
@@ -134,17 +139,17 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
 
 <!--Form to accept application details from user-->
 <form action="" method="POST" name="Application Form">
-<input type="hidden" name="id" value="<?php echo $id; ?>">
+<input type="hidden" name="applicantID" value="<?php echo $id; ?>">
 
-      <label class="applicantinfo">Full Name: </label><input type="text" name="fname" value="<?php echo $Name; ?>" size="30" placeholder="Full Name" required/><br><br>
-      <label class="applicantinfo">Email: </label><input type="email" name="email" value="<?php echo $Email; ?>" size="50" placeholder="Email" required/><br><br>
+      <label class="applicantinfo">Full Name: </label><input type="text" name="fname" value="<?php echo $Name; ?>" size="30" pattern="/^[A-Za-z]+$/" placeholder="Full Name" required/><br><br>
+      <label class="applicantinfo">Email: </label><input type="email" name="email" value="<?php echo $Email; ?>" size="50" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/" placeholder="Email" required/><br><br>
       <label class="applicantinfo"for="gender">Select your gender:</label>
       <select name="gender" id="gender">
         <option value="male">male</option>
         <option value="female">female</option>
         <option value="other">other</option>
       </select><br><br>
-      <label class="applicantinfo">University ID: </label><input type="text" name="universityID" size="60" placeholder="Use first three letters of your university name eg.LEG" required/><br><br>
+      <label class="applicantinfo">University ID: </label><input type="text" name="universityID" size="60" pattern="/^[A-Za-z]+$/" placeholder="Use first three letters of your university name eg.LEG" required/><br><br>
       <label class="applicantinfo">Major: </label><input type="text" name="major" size="50" placeholder="Type your major course here" required/><br><br>
       <label class="applicantinfo"for="level">Select your level:</label>
       <select name="levels" id="level"required>
@@ -153,7 +158,7 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
         <option value="300">300</option>
         <option value="400">400</option>
       </select><br><br>
-      <label class="applicantinfo">GPA: </label><input type="text" name="gpa" value="<?php echo $GPA; ?>" size="10" placeholder="GPA e.g., 3.34" required/><br><br>
+      <label class="applicantinfo">GPA: </label><input type="text" name="gpa" value="<?php echo $GPA; ?>" pattern="^[0-9]+$" size="10" placeholder="GPA e.g., 3.34" required/><br><br>
       <label class="applicantinfo" for="Company">Select your preferred company:</label>
       <select name="company" value="<?php echo $CompanyPreference; ?>" id="company"required>
         <option value="KPMG Ghana">KPMG GHANA</option>
@@ -163,19 +168,16 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
         <option value="Genkey">Genkey</option>
       </select><br><br>
       
-      <?php if ($update == true): ?>
-	    <input type="submit" name="update" class="button" value="Update Application" style="background: #556B2F;" >
-      <?php else: ?>
-	    <input type="submit" name="submit" class="button" value="Submit Application">
-      <?php endif ?>
-      
+  <?php if ($update == true): ?>
+	<button class="button" type="submit" name="update" style="background: #556B2F;" >update</button>
+<?php else: ?>
+	<button class="button" type="submit" name="submit" >Submit</button>
+<?php endif ?>
 </form><br><br>
 
 <?php
-
 require("footer.php");
 ?>
-
 
 </body>
 </html>
