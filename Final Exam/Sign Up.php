@@ -76,8 +76,5 @@
     //Closes connection to database
 	$conn->close();
 ?>
-
-
-
 </body>
 </html>

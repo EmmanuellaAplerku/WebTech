@@ -1,3 +1,4 @@
+ <!--Source for CSS styling on table: https://codepen.io/Radwa-Rady/pen/GRMJjGe-->
  <?php include("WebsiteDb_Connection.php");?>
  <?php include("edit_delete.php");?>
 
@@ -128,10 +129,10 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
     <td class="tablecontent"><?php echo $row['gpa']; ?></td>
     <td class="tablecontent"><?php echo $row['companypreference']; ?></td>
     <td>
-      <a href="application_form.php?edit=<?php echo $row['applicantID']; ?>" class="button">Edit</a>
+      <a href="application_form.php?edit=<?php echo $row['applicantID']; ?>" class="ebutton">Edit</a>
     </td>
     <td>
-      <a href="edit_delete.php?del=<?php echo $row['applicantID']; ?>" class="button">Delete</a>
+      <a href="edit_delete.php?del=<?php echo $row['applicantID']; ?>" class="dbutton">Delete</a>
     </td>
   </tr>
  <?php } ?>

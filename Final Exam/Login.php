@@ -1,3 +1,4 @@
+<!--Source for login design: https://codepen.io/Ihor_Sukhorada/pen/LBwRvv-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,14 @@
 <link href="website_styles.css" rel="stylesheet" type="text/css">
 
 <body>
+<style>
+body {
+  background-image: url('https://images.pexels.com/photos/3694711/pexels-photo-3694711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
     <!--Creating a navbar -->
     <nav class = "navbar navbar-light bg-transparent">
     <div class="container-fluid">
@@ -20,26 +29,32 @@
           </a>
     </div>
 
-
+    <div class="container">
+         <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="login-form">
 	 	<!--Page Title-->
 		<h3 class="loginpagetitle">Log In</h3>
 
         <br><br>
 
 <!--Form to accpet the login details of users-->
-<form action="" method="post" >
-   <label class="login-info" >Email: </label><input type="text" name="email" size="50" placeholder="Email" required/><br><br><br>
-   <label class="login-info" >Password: </label><input type="password" name="password" size="30" placeholder="Password" required/><br><br><br>
-   <label class="login-info" ></label><input type="submit" name="submit" class="button" value="Log In"><br>
+<form class="lgform" action="" method="post" >
+   <label class="login-info" >Email: </label><input type="text" name="email" size="50" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/" placeholder="Email" required/><br><br><br>
+   <label class="login-info" >Password: </label><input type="password" name="password" size="30" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" placeholder="Password" required/><br><br><br>
+   <label class="login-info" ></label><input type="submit" name="submit" class="lgbutton" value="Log In"><br>
    
     <!--Link to signup page-->
    <a href="Sign Up.php"><p class="signuppage">New here? Sign up</p></a>
 
 </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <?php
-
    //Connecting to the database
    require("WebsiteDb_Connection.php");
 
