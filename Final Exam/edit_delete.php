@@ -19,7 +19,7 @@ if (isset($_POST['update'])) {
     $CompanyPreference = $_POST['companypreference'];
 
     $sql= mysqli_query($dbname, "UPDATE applicant SET fname='$Name', email='$Email', gpa='$GPA', companypreference='$CompanyPreference' WHERE  applicantID=$id");
-
+//A message that prompts users that that details have been updated
     $_SESSION['message'] = "Application details updated!"; 
     header('location: application_form.php');
     

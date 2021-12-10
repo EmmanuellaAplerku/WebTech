@@ -108,7 +108,7 @@ if(isset($_POST["submit"])){
 <?php
 $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
 ?>
-
+<!--Creating table to hold the selected data-->
 <table>
   <thead>
     <tr>
