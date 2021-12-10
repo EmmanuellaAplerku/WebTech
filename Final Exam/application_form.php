@@ -1,6 +1,8 @@
- <?php    
-include("WebsiteDb_Connection.php");
+ <?php include("WebsiteDb_Connection.php");?>
+ <?php include("edit_delete.php");?>
 
+
+<?php
 //If statement that triggers query from the database - Allows applicant's details to be inserted
 if(isset($_POST["submit"])){
  
@@ -23,13 +25,30 @@ if(isset($_POST["submit"])){
           mysqli_query($conn, $query);
 
           //Redirects to another page
-      header("location: confirmation.php");
+      header("location: application_form.php");
 
 
     }
 
 //Closes connection to database
 $conn->close();
+?>
+
+<?php 
+	if (isset($_GET['edit'])) {
+		$id = $_GET['edit'];
+		$update = true;
+		$clientdetails = mysqli_query($dbname, "SELECT * FROM applicant WHERE applicantID=$id");
+
+		if ($clientdetails->num_rows == 1 ) {
+			$c = mysqli_fetch_array($clientdetails);
+			$Name = $c['fname'];
+			$Email = $c['email'];
+      $GPA = $c['gpa'];
+      $CompanyPreference = $c['companypreference'];
+
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -80,10 +99,45 @@ $conn->close();
 </p>
 </div>
 
+<!--Selecting form data from the table for user's view-->
+<?php
+$formdata = mysqli_query($dbname, "SELECT * FROM applicant");
+?>
+
+<table>
+  <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>GPA</th>
+      <th>Company Preference</th>
+      <th colspan="3">Changes</th>
+    </tr>
+  </thead>
+
+
+<?php while ($row = mysqli_fetch_array($formdata)) { ?>
+  <tr>
+    <td><?php echo $row['fname']; ?></td>
+    <td><?php echo $row['email']; ?></td>
+    <td><?php echo $row['gpa']; ?></td>
+    <td><?php echo $row['companypreference']; ?></td>
+    <td>
+      <a href="application_form.php?edit=<?php echo $row['id']; ?>" class="button">Edit</a>
+    </td>
+    <td>
+      <a href="edit_delete.php?del=<?php echo $row['id']; ?>" class="button">Delete</a>
+    </td>
+  </tr>
+ <?php } ?>
+</table>
+
 <!--Form to accept application details from user-->
 <form action="" method="POST" name="Application Form">
-      <label class="applicantinfo">Full Name: </label><input type="text" name="fname" size="30" placeholder="Full Name" required/><br><br>
-      <label class="applicantinfo">Email: </label><input type="email" name="email" size="50" placeholder="Email" required/><br><br>
+<input type="hidden" name="id" value="<?php echo $id; ?>">
+
+      <label class="applicantinfo">Full Name: </label><input type="text" name="fname" value="<?php echo $Name; ?>" size="30" placeholder="Full Name" required/><br><br>
+      <label class="applicantinfo">Email: </label><input type="email" name="email" value="<?php echo $Email; ?>" size="50" placeholder="Email" required/><br><br>
       <label class="applicantinfo"for="gender">Select your gender:</label>
       <select name="gender" id="gender">
         <option value="male">male</option>
@@ -93,22 +147,27 @@ $conn->close();
       <label class="applicantinfo">University ID: </label><input type="text" name="universityID" size="60" placeholder="Use first three letters of your university name eg.LEG" required/><br><br>
       <label class="applicantinfo">Major: </label><input type="text" name="major" size="50" placeholder="Type your major course here" required/><br><br>
       <label class="applicantinfo"for="level">Select your level:</label>
-      <select name="levels" id="level">
+      <select name="levels" id="level"required>
         <option value="100">100</option>
         <option value="200">200</option>
         <option value="300">300</option>
         <option value="400">400</option>
       </select><br><br>
-      <label class="applicantinfo">GPA: </label><input type="text" name="gpa" size="10" placeholder="GPA e.g., 3.34" required/><br><br>
+      <label class="applicantinfo">GPA: </label><input type="text" name="gpa" value="<?php echo $GPA; ?>" size="10" placeholder="GPA e.g., 3.34" required/><br><br>
       <label class="applicantinfo" for="Company">Select your preferred company:</label>
-      <select name="company" id="company">
+      <select name="company" value="<?php echo $CompanyPreference; ?>" id="company"required>
         <option value="KPMG Ghana">KPMG GHANA</option>
         <option value="Databank">Databank</option>
         <option value="Cargill Ghana Limited">Cargill Ghana Limited</option>
         <option value="Nestle Ghana">Nestle Ghana</option>
         <option value="Genkey">Genkey</option>
       </select><br><br>
-      <label class="applicationbutton"></label><input type="submit" name="submit" class="button" value="Submit Application">
+      
+      <?php if ($update == true): ?>
+	    <input type="submit" name="update" class="button" value="Update Application" style="background: #556B2F;" >
+      <?php else: ?>
+	    <input type="submit" name="submit" class="button" value="Submit Application">
+      <?php endif ?>
       
 </form><br><br>
 

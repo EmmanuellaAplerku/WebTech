@@ -42,28 +42,8 @@
 
 
  <!--Confirmation message-->
- <p class="confirm_message">Your application has been sent successfully!</p>
-<br><br> 
-
-<!--Delete application message-->
-<p class="approvedeletion">You can click on the withdraw button if you wish to terminate your application.</p><br>
-
-<!--Creating a delete button-->
-<button type="button" id="deletebutton" name="withdraw" value="withdraw">Withdraw Application</button><br><br>
-
-
-<script>
-$message = "Are you sure you want to withdraw your application?";
-</script>
-
-<?php
-if (isset($_POST['withdraw'])) {
-  echo "<script type='text/javascript'>alert('$message');</script>";
-
-  require('delete_application.php');  
-
-} 
-?>
+ <p class="confirm_message"><h3>Your application has been sent successfully!</h3></p>
+<br><br><br><br>
 
 <!-- Site footer -->
 <footer class="site-footer">
