@@ -156,7 +156,7 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
         <option value="300">300</option>
         <option value="400">400</option>
       </select><br><br>
-      <label class="applicantinfo">GPA: </label><input type="text" name="gpa" value="<?php echo $GPA; ?>" pattern="^[0-9]+$" size="10" placeholder="GPA e.g., 3.34" required/><br><br>
+      <label class="applicantinfo">GPA: </label><input type="text" name="gpa" value="<?php echo $GPA; ?>"  size="10" placeholder="GPA e.g., 3.34" required/><br><br>
       <label class="applicantinfo" for="Company">Select your preferred company:</label>
       <select name="company" value="<?php echo $CompanyPreference; ?>" id="company"required>
         <option value="KPMG Ghana">KPMG GHANA</option>

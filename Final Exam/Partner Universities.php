@@ -90,7 +90,7 @@
             <div class="card">
                 <div class="card-horizontal">
                     <div class="img-square-wrapper">
-                        <img class="" src="legonlogo.png" alt="Card image cap" width="608px", height="523px">
+                        <img class="" src="Legonlogo.png" alt="Card image cap" width="608px", height="523px">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">University of Ghana, Legon</h4>
