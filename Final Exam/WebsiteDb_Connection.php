@@ -1,7 +1,7 @@
 <?php
 $servername = "20.108.166.138";
 $username = "new";
-$password = "exam.16";
+$password = "exam16";
 $dbname = "websitedb";
 
 //$username = "root";
