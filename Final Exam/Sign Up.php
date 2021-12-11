@@ -27,7 +27,7 @@ body {
 <Script>
     //Checking that passwords are equal
     function PasswordMatch(){
-        var originalpass=document.SignUp.pwd1.value;
+        var originalpass=document.SignUp.password.value;
         var confirmpass=document.SignUp.pwd2.value;
 
         if(originalpass===confirmpass){

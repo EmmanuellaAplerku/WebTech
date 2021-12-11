@@ -40,8 +40,8 @@ body {
 
 <!--Form to accpet the login details of users-->
 <form class="lgform" action="" method="post" >
-   <label class="login-info" >Email: </label><input type="text" name="email" size="100" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/" placeholder="Email" required/><br><br><br>
-   <label class="login-info" >Password: </label><input type="password" name="password" size="100" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" placeholder="Password" required/><br><br><br>
+   <label class="login-info" >Email: </label><input type="text" name="email" size="80" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/" placeholder="Email" required/><br><br><br>
+   <label class="login-info" >Password: </label><input type="password" name="password" size="80" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" placeholder="Password" required/><br><br><br>
    <label class="login-info" ></label><input type="submit" name="submit" class="lgbutton" value="Log In"><br>
    
     <!--Link to signup page-->
