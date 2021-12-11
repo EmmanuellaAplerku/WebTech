@@ -37,7 +37,7 @@
 <form action="" method="post" name="SignUp" onsubmit="return PasswordMatch()">
       <label class="signupinfo">First name: </label><input type="text" name="fname" size="30" placeholder="First Name" required/><br><br>
       <label class="signupinfo">Last name: </label><input type="text" name="lname" size="30" placeholder="Last Name" required/><br><br>
-      <label class="signupinfo">Email: </label><input type="email" name="email" size="50" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/" placeholder="Email" required/><br><br>
+      <label class="signupinfo">Email: </label><input type="email" name="email" size="50"  placeholder="Email" required/><br><br>
       <label class="signupinfo">Password:   </label><input type="password" name="password" size="30" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" title="Must contain at least a number, one uppercase letter, one lowercase letter, and at least 8 or more characters" placeholder="Password" required><br><br>
       <label class="signupinfo">Confirm Password:   </label><input type="password" name="pwd2" size="30" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" title="Must contain at least a number, one uppercase letter, one lowercase letter, and at least 8 or more characters" placeholder="Confirm Password" required><br><br>
       <label class="signupbutton"></label><input  type="submit" name="submit" class="button" value="Sign Up">
