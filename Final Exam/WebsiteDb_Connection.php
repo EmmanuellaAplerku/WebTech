@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "server";
+$password = "Final.16";
 $dbname = "websitedb";
 
 //$username = "root";
@@ -14,6 +14,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo $conn;
+echo "Successful";
 
 ?>
