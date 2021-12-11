@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "server";
-$password = "Final.16";
+$username = "new";
+$password = "exam.16";
 $dbname = "websitedb";
 
 //$username = "root";
