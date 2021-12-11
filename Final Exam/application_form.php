@@ -139,15 +139,15 @@ $formdata = mysqli_query($dbname, "SELECT * FROM applicant");
 <form action="" method="POST" name="Application Form">
 <input type="hidden" name="applicantID" value="<?php echo $id; ?>">
 
-      <label class="applicantinfo">Full Name: </label><input type="text" name="fname" value="<?php echo $Name; ?>" size="30" pattern="/^[A-Za-z]+$/" placeholder="Full Name" required/><br><br>
-      <label class="applicantinfo">Email: </label><input type="email" name="email" value="<?php echo $Email; ?>" size="50" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/" placeholder="Email" required/><br><br>
+      <label class="applicantinfo">Full Name: </label><input type="text" name="fname" value="<?php echo $Name; ?>" size="30"  placeholder="Full Name" required/><br><br>
+      <label class="applicantinfo">Email: </label><input type="email" name="email" value="<?php echo $Email; ?>" size="50"  placeholder="Email" required/><br><br>
       <label class="applicantinfo"for="gender">Select your gender:</label>
       <select name="gender" id="gender">
         <option value="male">male</option>
         <option value="female">female</option>
         <option value="other">other</option>
       </select><br><br>
-      <label class="applicantinfo">University ID: </label><input type="text" name="universityID" size="60" pattern="/^[A-Za-z]+$/" placeholder="Use first three letters of your university name eg.LEG" required/><br><br>
+      <label class="applicantinfo">University ID: </label><input type="text" name="universityID" size="60"  placeholder="Use first three letters of your university name eg.LEG" required/><br><br>
       <label class="applicantinfo">Major: </label><input type="text" name="major" size="50" placeholder="Type your major course here" required/><br><br>
       <label class="applicantinfo"for="level">Select your level:</label>
       <select name="levels" id="level"required>
