@@ -1,6 +1,6 @@
 <?php
 session_start();
-$dbname = mysqli_connect('localhost','root','','websitedb');
+$dbname = mysqli_connect('localhost','root','Obaapasweetie16','websitedb');
 
 //initialize variables
 $Name = "";
