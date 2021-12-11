@@ -53,7 +53,7 @@ body {
 
 <!--Form to accept sign up details from user-->
 <form action="" method="post" name="SignUp" onsubmit="return PasswordMatch()">
-      <label class="signupinfo">First name</label><input type="text" name="fname"   placeholder="First Name" required/><br><br>
+      <label class="signupinfo">First name</label><input type="text" name="fname" size="100"  placeholder="First Name" required/><br><br>
       <label class="signupinfo">Last name</label><input type="text" name="lname" size="100"  placeholder="Last Name" required/><br><br>
       <label class="signupinfo">Email</label><input type="email" name="email" size="90" pattern="/^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/"  placeholder="Email" required/><br><br>
       <label class="signupinfo">Password</label><input type="password" name="password" size="100" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" title="Must contain at least a number, one uppercase letter, one lowercase letter, and at least 8 or more characters" placeholder="Password" required><br><br>
