@@ -39,7 +39,6 @@
               <li><a href="Exam_index.php">Home</a></li>
               <li><a href="client companies.php">Client Companies</a></li>
               <li><a href="Partner Universities.php">Partner Universities</a></li>
-              <li><a href="Success stories.php">Success Stories</a></li>
               <li><a href="Sign Up.php">Sign Up</a></li>
               <li><a href="#">Apply Now</a></li>
 

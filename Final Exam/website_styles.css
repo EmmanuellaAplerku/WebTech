@@ -374,3 +374,32 @@ td {
 .lgbutton{
   width: 100%;
 }
+
+.signup-form{
+  background:#1a11117a;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding: 100px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.SignUpPageTitle{
+  text-align: center;
+  margin-top: 60px;
+}
+.container{
+  background: #09090a4f;
+  border-radius: 50px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.38);
+}
+.sbutton{
+  width: 100%;
+}
+
+.signupinfo{
+  padding-left:70px;
+  text-align: left;
+
+}
+

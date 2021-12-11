@@ -31,9 +31,6 @@
       <a class="nav-link" href="Partner Universities.php">Partner Universities</a>
         </li>
         <li class="nav-item">
-      <a class="nav-link" href="success stories.php">Success Stories</a>
-        </li>
-        <li class="nav-item">
       <a class="nav-link" href="application_form.php">Apply Now</a>
         </li>
     </ul>
@@ -42,7 +39,8 @@
 
 
  <!--Confirmation message-->
- <p class="confirm_message"><h3>Your application has been sent successfully!</h3></p>
+ <p class="confirm_message"><h3>Your application has been sent successfully!</h3> 
+  Kindly pay attention to your emails as your preferred companies will communicate subsequent steps</p>
 <br><br><br><br>
 
 <!-- Site footer -->
